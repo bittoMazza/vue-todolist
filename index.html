@@ -21,8 +21,8 @@
                 <button class="btn btn-primary"  @click="addNewElement(newListElement,newDoneElement)">Cliccami per inserire il nuovo TODO!! </button>
             </div>            
             <ul class="list-group pt-5">
-                <li v-for="(element,index) in todos" @click="completedToDo(index)" class="list-group-item text-center"> 
-                    <span :class="{'text-decoration-line-through':element.done === true}"> {{ element.text }} </span> 
+                <li v-for="(element,index) in todos" class="list-group-item text-center"> 
+                    <span :class="{'text-decoration-line-through':element.done === true}" @click="completedToDo(index)"> {{ element.text }} </span> 
                     <span class="text-danger" @click="removeToDo(index)"> X </span>
                 </li>
             </ul>
