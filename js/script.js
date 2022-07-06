@@ -39,10 +39,15 @@ const app = new Vue(
             },
             // Creiamo un nuovo oggetto e alla proprietà text assegniamo il valore preso in input
             addNewElement(newItemElement){
-                let newItem = {text: newItemElement , done:false};
-                this.todos.push(newItem)
-                this.newListElement = '';
-                console.log(this.todos)
+                if(newItemElement == ""){
+                    alert('Inserire un azione da compiere')
+                }
+                else{
+                    let newItem = {text: newItemElement , done:false};
+                    this.todos.push(newItem)
+                    this.newListElement = '';
+                    console.log(this.todos)
+                }               
             },
             completedToDo(i){
                 this.todos[i].done = !this.todos[i].done
