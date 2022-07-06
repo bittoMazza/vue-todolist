@@ -16,6 +16,18 @@ const app = new Vue(
                 {
                     text: 'Fare il bucato',
                     done: false
+                }, 
+                {
+                    text: 'Fare da mangiare',
+                    done: true
+                },
+                {
+                    text: 'Fare schifo',
+                    done: true
+                },
+                {
+                    text: 'Finire stranger things',
+                    done: false
                 }
             ]
         },

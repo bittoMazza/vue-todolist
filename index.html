@@ -15,9 +15,11 @@
 
     <div id="app">
         <div class="container">
-            <ul class="list-group">
-                <li v-for="(element,index) in todos" class="list-group-item" :class="{text-decoration-line-through: element.done === true}"> 
+            <h1 class="text-center display-1 "> TO DO LIST </h1>
+            <ul class="list-group pt-3">
+                <li v-for="(element,index) in todos" class="list-group-item" :class="{'text-decoration-line-through':element.done === true}"> 
                     {{ element.text }}
+                    <span> X </span>
                 </li>
             </ul>
         </div>
