@@ -16,6 +16,10 @@
     <div id="app">
         <div class="container">
             <h1 class="text-center display-1 "> TO DO LIST </h1>
+            <div class="d-flex justify-content-center gap-2">
+                <input type="text" v-model.trim="newListElement" @keyup.enter="addNewElement(newListElement)" class="rounded py-3  text-center" placeholder="Inserire nuovo TO DO">
+                <button class="btn btn-primary"  @click="addNewElement(newListElement)">Cliccami per inserire il nuovo TODO!! </button>
+            </div>            
             <ul class="list-group pt-3">
                 <li v-for="(element,index) in todos" class="list-group-item" :class="{'text-decoration-line-through':element.done === true}"> 
                     {{ element.text }}
