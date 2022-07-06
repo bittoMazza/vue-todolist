@@ -32,7 +32,9 @@ const app = new Vue(
             ]
         },
         methods: {
-           
+            removeToDo(indice){
+                this.todos.splice(indice,1);
+            }
         }
 
     }

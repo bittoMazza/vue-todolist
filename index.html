@@ -19,7 +19,7 @@
             <ul class="list-group pt-3">
                 <li v-for="(element,index) in todos" class="list-group-item" :class="{'text-decoration-line-through':element.done === true}"> 
                     {{ element.text }}
-                    <span> X </span>
+                    <span class="text-danger" @click="removeToDo(index)"> X </span>
                 </li>
             </ul>
         </div>
