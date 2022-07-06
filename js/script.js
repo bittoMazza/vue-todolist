@@ -5,6 +5,7 @@ const app = new Vue(
         el:'#app',
         data: {
             newListElement : '',
+            newDoneElement: '',
             todos: [
                 {
                     text: 'Fare i compiti',
@@ -38,10 +39,13 @@ const app = new Vue(
             },
             // Creiamo un nuovo oggetto e alla proprietà text assegniamo il valore preso in input
             addNewElement(newItemElement){
-                let newItem = {text: newItemElement};
+                let newItem = {text: newItemElement , done:false};
                 this.todos.push(newItem)
                 this.newListElement = '';
                 console.log(this.todos)
+            },
+            completedToDo(i){
+                this.todos[i].done = !this.todos[i].done
             }
         }
 
